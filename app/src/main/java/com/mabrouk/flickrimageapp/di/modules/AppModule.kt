@@ -16,9 +16,8 @@ import org.koin.dsl.module
 class AppModule (val app:MyApp){
         val appModule = module(override = true) {
             single {
-                BaseViewModelFactory(get(), get(), app)
+                BaseViewModelFactory(get(), get(), get())
             }
-
-            single { SharedManager(app.applicationContext,"Test") }
+            single { SharedManager(get(),"Test") }
         }
 }

@@ -11,11 +11,11 @@ import org.koin.dsl.module
 * FlickrImage App
 */
 
-class RoomModule (val app: Context, val dbName: String) {
+class RoomModule (val dbName: String) {
         val roomModule = module(override = true) {
             single {
                 Room.databaseBuilder(
-                    app,
+                    get(),
                     ImagesDb::class.java,
                     dbName
                 ).fallbackToDestructiveMigration().build().getTestDao()

@@ -36,7 +36,7 @@ class ImageListViewModel<v : ImageListCallBack>(app:Application,val api:BaseApi,
 
     val searchListner:SearchView.OnQueryTextListener = object : SearchView.OnQueryTextListener{
         override fun onQueryTextSubmit(query: String?): Boolean {
-            return true
+            return false
         }
 
         override fun onQueryTextChange(newText: String?): Boolean {

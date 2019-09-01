@@ -31,7 +31,7 @@ class MyApp : Application() {
             androidContext(this@MyApp)
             modules(ApiModule("https://api.flickr.com").apiModule,
                 AppModule(this@MyApp).appModule,
-                RoomModule(this@MyApp,"Images").roomModule)
+                RoomModule("Images").roomModule)
         }
 
     }

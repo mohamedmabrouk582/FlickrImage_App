@@ -37,7 +37,6 @@ import org.koin.core.KoinComponent
 class ImageActivity : BaseActivity() , ImageListCallBack, ImagesPageAdapter.ImagesCallBack ,RequestCoroutines ,
     KoinComponent {
     lateinit var layoutBinding: ImageListLayoutBinding
-    val manager:SharedManager by inject<SharedManager>()
     val factory:BaseViewModelFactory by inject<BaseViewModelFactory>()
     lateinit var viewModel: ImageListViewModel<ImageListCallBack>
     val merlin:Merlin by lazy {
